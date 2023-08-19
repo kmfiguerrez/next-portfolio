@@ -1,10 +1,44 @@
-import DisappearingText from "./disappearing-text.tsx"
-
+import DisappearingText from "@/components/sections/home-section/disappearing-text.tsx";
+import Link from 'next/link'
 
 const HomeSection = () => {
   return (
-    <div className="border border-blue-700 min-h-screen">
-      <DisappearingText />
+    <div id="home" className="flex items-center min-h-screen">      
+      {/* This outer div is a flex item. */}
+      <div>
+        <div>
+          <Link
+            href={'/#about-me'}
+            className="
+                      transition 
+                      inline-block border 
+                      border-blue-700 
+                      rounded-md 
+                      py-2
+                      px-3
+                      text-blue-700
+                      hover:bg-blue-500
+                      hover:text-white
+                      hover:border-zinc-950
+                    "
+          >
+            Hi, I'm
+          </Link>
+        </div>
+        {/* Name. */}
+        <p className="
+              text-3xl
+              sm:text-4xl
+              md:text-7xl
+              font-bold 
+              tracking-wider 
+              my-2
+            ">
+          KARL MICHAEL FIGUERREZ
+        </p>
+        {/* Disappearing text. */}
+        <DisappearingText />
+      </div>
     </div>    
   )
 }

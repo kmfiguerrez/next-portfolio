@@ -1,8 +1,6 @@
 'use client'
 
-import { stat } from "fs";
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-
 
 export default function DisappearingText() {
     const jobTitles: Array<string[]> = [['IT', 'SPECIALIST'], ['JAVASCRIPT', 'DEVELOPER']];
@@ -151,7 +149,7 @@ export default function DisappearingText() {
                     }                        
 
                     // If done with the first job, then set the next job.
-                    if (status === 'removing' && nextWord === 'first-word') {
+                    if (currentJob === 'first-job' && status === 'removing' && nextWord === 'first-word') {
                         setCurrentJob('second-job')
                         break;
                     }                                        
@@ -178,7 +176,7 @@ export default function DisappearingText() {
                     }
 
                     // If done with the second job, then back to the first job.
-                    if (status === 'removing' && nextWord === 'first-word') {
+                    if (currentJob === 'second-job' && status === 'removing' && nextWord === 'first-word') {
                         setCurrentJob('first-job')                    
                         break;
                     }
@@ -195,15 +193,23 @@ export default function DisappearingText() {
         
     }, [firstWord, secondWord, status, nextWord])    
 
-    return (
-        <>
-            {/* <p>{currentJob}</p> */}
-            <p className="before:content-cli">{firstWord} <span className="text-blue-700">{secondWord}</span></p>
-            <p>{nextWord.toString()}</p>
-            <p>{currentJob}</p>
-            <p>current count: {countRef.current}</p>
-            <p>status: {status.toString()}</p>
-            <p>{firstJob[0].length}</p>
-        </>        
+    return (                            
+      <p className={`
+        before:content-[open-quote] 
+        after:content-[close-quote]
+        text-xl
+        sm:text-2xl
+        md:text-3xl 
+        tracking-wider
+      `}>
+        {firstWord} <span className="text-blue-700">{secondWord}</span>
+      </p>
+
+      // <p>{nextWord.toString()}</p>
+      // <p>{currentJob}</p>
+      // <p>current count: {countRef.current}</p>
+      // <p>status: {status.toString()}</p>
+      // <p>{firstJob[0].length}</p>  
+        
     )
 }

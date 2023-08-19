@@ -3,6 +3,7 @@
 import { navigationLinks } from '@/constants/nav-links'
 import { Disclosure, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export default function Nav() {
   return (
@@ -14,14 +15,14 @@ export default function Nav() {
             <div className='sm:hidden'>            
               <Disclosure.Button className="rounded-md p-2 text-zinc-400 hover:bg-zinc-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">                
                 {open ? (
-                  <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
                 ) : (
-                  <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  <Bars3Icon className="block h-7 w-7" aria-hidden="true" />
                 )}
               </Disclosure.Button>
             </div>
             {/* flex item */}
-            <div className='font-medium tracking-wide text-lg'>              
+            <div className='font-medium tracking-wide text-xl'>              
               KMF
             </div>
             {/* flex item */}
@@ -33,21 +34,13 @@ export default function Nav() {
                       key={link.href}
                       className='mx-2'
                     >
-                      {link.label}
+                      <Link href={link.href}>{link.label}</Link>
                     </li>
                   ))
                 }
               </ul>
             </div>
           </div>
-
-
-
-
-
-
-
-
 
           {/*
             Use the `Transition` + `open` render prop argument to add transitions.
@@ -73,7 +66,7 @@ export default function Nav() {
                         key={link.href}
                         className='mx-2 my-1 hover:bg-zinc-700 rounded-md ps-2 py-2'
                       >
-                        {link.label}
+                        <Link href={link.href}>{link.label}</Link>                        
                       </li>
                     ))
                   }

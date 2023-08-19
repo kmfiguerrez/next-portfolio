@@ -1,18 +1,18 @@
 export const navigationLinks = [
   {
     label: 'HOME',
-    href: 'home'
+    href: '/#home'
   },
   {
     label: 'ABOUT ME',
-    href: 'about-me'
+    href: '/#about-me'
   },
   {
     label: 'PROJECTS',
-    href: 'projects'
+    href: '/#projects'
   },
   {
     label: 'CONTACTS',
-    href: 'contacts'
+    href: '/#contacts'
   },
 ]

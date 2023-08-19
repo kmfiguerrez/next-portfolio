@@ -1,53 +1,20 @@
 'use client'
 
+import { stat } from "fs";
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 
 export default function DisappearingText() {
-    const jobTitles = [['IT', 'SPECIALIST'], ['JAVASCRIPT', 'DEVELOPER']];
-    const job = jobTitles[0]    
-    const [currentJob, setCurrentJob] = useState('');
-    const [firstWord, setFirstWord] = useState('');
-    const [secondWord, setSecondWord] = useState('');
-    const [status, setstatus] = useState('displaying');
-    const [nextWord, setNextWord] = useState('first-word');
+    const jobTitles: Array<string[]> = [['IT', 'SPECIALIST'], ['JAVASCRIPT', 'DEVELOPER']];
+    const firstJob = jobTitles[0]
+    const secondJob = jobTitles[1]
+    const [currentJob, setCurrentJob] = useState<string>('first-job'); // first-job, second-job.
+    const [firstWord, setFirstWord] = useState<string>('');
+    const [secondWord, setSecondWord] = useState<string>('');
+    const [status, setstatus] = useState<string>('displaying'); // displaying, sleeping, removing.
+    const [nextWord, setNextWord] = useState<string>('first-word'); // first-word, second-word.
     const countRef = useRef(0);
-    
- 
-    const displayText = async () => {
-        return new Promise ((resolve, reject) => {
-            const timeoutId = setTimeout(() => {
-                setCurrentJob(currentJob + job[countRef.current])
-                countRef.current++
-            }, 500)
-    
-            // To prevent displaying undefined.
-            if (countRef.current === job.length) {
-                clearTimeout(timeoutId)
-                resolve('Done displaying text!')
-            }
-        })
-        
-    }
-    
-    const removeText = async () => {
-        return new Promise((resolve, reject) => {
-            const timeoutId = setTimeout(() => {
-                // Remove each character from the last.
-                let previousWord = currentJob.split('') 
-                previousWord.pop();            
-    
-                setCurrentJob(previousWord.join(''))
-                countRef.current--
-            }, 500)
-    
-            // To prevent displaying undefined.
-            if (countRef.current === 0) {
-                clearTimeout(timeoutId)
-                resolve('Done removing text!')
-            }
-        })        
-    }
+
 
     const displayTextSync = (
         text: string,
@@ -135,28 +102,90 @@ export default function DisappearingText() {
 
         const display = async () => {            
             
-            switch (status) {
-                case 'displaying': {
-                    if (nextWord === 'first-word') {
-                        displayTextSync(job[0], setFirstWord, firstWord, 100);
+            // switch (status) {
+            //     case 'displaying': {
+            //         if (nextWord === 'first-word') {
+            //             displayTextSync(firstJob[0], setFirstWord, firstWord, 100);
+            //         } else {
+            //             displayTextSync(firstJob[1], setSecondWord, secondWord, 100)                   
+            //         }
+            //         break;
+            //     }
+            //     case 'sleeping': {
+            //         await sleep(3000)
+            //         break;
+            //     }
+            //     case 'removing': {
+            //         if (nextWord === 'second-word') {
+            //             removeTextSync(setSecondWord, secondWord, 100)
+            //         } else {
+            //             removeTextSync(setFirstWord, firstWord, 100)
+            //         }
+            //         break;
+            //     }                           
+            //     default:
+            //         break;
+            // }
+
+
+            switch (currentJob) {
+                case 'first-job': {
+                    // Check status
+                    if (status === 'displaying') {                            
+                        nextWord === 'first-word' ? (
+                            displayTextSync(firstJob[0], setFirstWord, firstWord, 100)
+                        ) : (
+                            displayTextSync(firstJob[1], setSecondWord, secondWord, 100)
+                        )
+                        break;
+                    } else if (status === 'sleeping') {
+                        await sleep(3000)
+                        break;
                     } else {
-                        displayTextSync(job[1], setSecondWord, secondWord, 100);                        
-                    }
-                    break;
+                        // Otherwise status is removing.
+                        nextWord === 'second-word' ? (
+                            removeTextSync(setSecondWord, secondWord, 100)
+                        ) : (
+                            removeTextSync(setFirstWord, firstWord, 100)
+                        )                        
+                    }                        
+
+                    // If done with the first job, then set the next job.
+                    if (status === 'removing' && nextWord === 'first-word') {
+                        setCurrentJob('second-job')
+                        break;
+                    }                                        
                 }
-                case 'sleeping': {
-                    await sleep(3000)
-                    break;
-                }
-                case 'removing': {
-                    if (nextWord === 'second-word') {
-                        removeTextSync(setSecondWord, secondWord, 100)
+                case 'second-job':{
+                    // Check status
+                    if (status === 'displaying') {                            
+                        nextWord === 'first-word' ? (
+                            displayTextSync(secondJob[0], setFirstWord, firstWord, 100)
+                        ) : (
+                            displayTextSync(secondJob[1], setSecondWord, secondWord, 100)
+                        )
+                        break;
+                    } else if (status === 'sleeping') {
+                        await sleep(3000)
+                        break;
                     } else {
-                        removeTextSync(setFirstWord, firstWord, 100)
+                        // Otherwise status is removing.
+                        nextWord === 'second-word' ? (
+                            removeTextSync(setSecondWord, secondWord, 100)
+                        ) : (
+                            removeTextSync(setFirstWord, firstWord, 100)
+                        )                        
                     }
-                    break;
-                }                           
+
+                    // If done with the second job, then back to the first job.
+                    if (status === 'removing' && nextWord === 'first-word') {
+                        setCurrentJob('first-job')                    
+                        break;
+                    }
+                }
+            
                 default:
+                    console.log('Error: cant read jobs!')
                     break;
             }
             
@@ -171,9 +200,10 @@ export default function DisappearingText() {
             {/* <p>{currentJob}</p> */}
             <p className="before:content-cli">{firstWord} <span className="text-blue-700">{secondWord}</span></p>
             <p>{nextWord.toString()}</p>
+            <p>{currentJob}</p>
             <p>current count: {countRef.current}</p>
             <p>status: {status.toString()}</p>
-            <p>{job[0].length}</p>
+            <p>{firstJob[0].length}</p>
         </>        
     )
 }

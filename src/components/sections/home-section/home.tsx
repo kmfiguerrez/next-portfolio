@@ -12,11 +12,11 @@ const HomeSection = () => {
             className="
                       transition 
                       inline-block border 
-                      border-blue-700 
+                      border-blue-600 
                       rounded-md 
                       py-2
                       px-3
-                      text-blue-700
+                      text-blue-600
                       hover:bg-blue-500
                       hover:text-white
                       hover:border-zinc-950

@@ -202,7 +202,7 @@ export default function DisappearingText() {
         md:text-3xl 
         tracking-wider
       `}>
-        {firstWord} <span className="text-blue-700">{secondWord}</span>
+        {firstWord} <span className="text-blue-600">{secondWord}</span>
       </p>
 
       // <p>{nextWord.toString()}</p>

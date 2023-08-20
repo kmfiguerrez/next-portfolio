@@ -5,7 +5,7 @@ import GoogleCard from './google-card'
 
 const AboutMeSection = () => {
   return (
-    <div id='about-me' className="min-h-screen border border-blue-500">
+    <div id='about-me' className="min-h-screen">
       {/* Heading */}
       <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">
         ABOUT ME
@@ -68,7 +68,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/tailwind1.svg'
+              src='/logos/tailwind.svg'
               alt='Tailwind Logo'
               height={28}
               width={28}            

@@ -1,4 +1,4 @@
-import DisappearingText from "@/components/sections/home-section/disappearing-text.tsx";
+import DisappearingText from "@/components/sections/home/disappearing-text.tsx";
 import Link from 'next/link'
 
 const HomeSection = () => {

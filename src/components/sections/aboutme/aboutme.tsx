@@ -1,53 +1,43 @@
 import Image from 'next/image'
+import WebDevCard from './webdev-card'
+import GoogleCard from './google-card'
+
 
 const AboutMeSection = () => {
   return (
     <div id='about-me' className="min-h-screen border border-blue-500">
-
-      <h2 className="
-        text-center
-        text-3xl
-        md:text-5xl
-        font-bold
-        mb-8
-
-      ">
+      {/* Heading */}
+      <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">
         ABOUT ME
       </h2>
 
       {/* What I'm Working On block */}
-      <div id='wiwo-block' className='mb-8'>      
-        <p className="
-          text-blue-600
-          md:text-2xl
-        ">
+      <div id='wiwo-block' className='mb-8'>     
+        {/* Heading */}
+        <h3 className="text-lg md:text-2xl text-blue-600 mb-8">
           WHAT I'M WORKING ON
-        </p>
-        <div className="
-          flex
-          flex-col
-        ">
-          <div>
-            WEB DEVELOPMENT
+        </h3>
+
+        <div className="flex flex-col md:flex-row md:justify-between">
+          <div className='mb-8'>
+            <WebDevCard />
           </div>
-          <div>
-            CISCO
+          <div className='md:basis-1/2'>
+            <GoogleCard />
           </div>
         </div>
+
       </div>
 
       {/* Skills block */}
-      <div id='skills-block'>
+      <div id='skills-block' className='mb-8'>
         {/* Heading */}
-        <h2 className="
-          text-blue-600
-          md:text-2xl
-          mb-8
-        ">
+        <h3 className="text-xl md:text-2xl text-blue-600 mb-8">
           SKILLS
-        </h2>
+        </h3>
+
         {/* Grid */}
-        <div className="grid grid-cols-2 gap-x-4 gap-y-5">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-8">
 
           <div className='flex items-center'>
             <Image 
@@ -69,12 +59,12 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/bootstrap.svg'
-              alt='Bootstrap Logo'
-              height={30}
-              width={30}
+              src='/logos/sass.svg'
+              alt='SASS Logo'
+              height={28}
+              width={28}            
             />
-            <p className='ms-2'>Bootstrap</p>
+            <p className='ms-2'>SASS</p>
           </div>
           <div className='flex items-center'>
             <Image 
@@ -87,13 +77,13 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/sass.svg'
-              alt='SASS Logo'
-              height={28}
-              width={28}            
+              src='/logos/bootstrap.svg'
+              alt='Bootstrap Logo'
+              height={30}
+              width={30}
             />
-            <p className='ms-2'>SASS</p>
-          </div>
+            <p className='ms-2'>Bootstrap</p>
+          </div>          
           <div className='flex items-center'>
             <Image 
               src='/logos/javascript.svg'
@@ -195,10 +185,8 @@ const AboutMeSection = () => {
           </div>        
 
         </div>
+
       </div>
-
-
-
     </div>
   )
 }

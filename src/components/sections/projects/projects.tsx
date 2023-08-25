@@ -1,6 +1,6 @@
-
 import Ipv4Card from "./ipv4-card"
 import Ipv6Card from "./ipv6-card"
+import ThreadCard from "./thread-card"
 
 
 const ProjectSection = () => {
@@ -18,12 +18,10 @@ const ProjectSection = () => {
         <div>
           <Ipv6Card />
         </div>
-        <div>project 3</div>
+        <div>
+          <ThreadCard />
+        </div>
       </div>
-
-      
-
-
     </div>
   )
 }

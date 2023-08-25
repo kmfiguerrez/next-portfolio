@@ -1,5 +1,6 @@
 
 import Ipv4Card from "./ipv4-card"
+import Ipv6Card from "./ipv6-card"
 
 
 const ProjectSection = () => {
@@ -14,7 +15,9 @@ const ProjectSection = () => {
         <div>
           <Ipv4Card />
         </div>
-        <div>project 2</div>
+        <div>
+          <Ipv6Card />
+        </div>
         <div>project 3</div>
       </div>
 

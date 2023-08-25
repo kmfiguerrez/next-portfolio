@@ -25,7 +25,7 @@ const ThreadCard = () => {
       </CardHeader>
       <CardContent>
         <div className='flex justify-between'>
-          <p className='text-red-500 font-semibold'>
+          <p className='text-red-500 font-semibold basis-3/4'>
             Both UI and logic are not yet finished
           </p>
           <Image 

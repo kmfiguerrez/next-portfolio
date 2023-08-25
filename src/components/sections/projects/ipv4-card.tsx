@@ -21,17 +21,18 @@ const Ipv4Card = () => {
           />
         </div>
         <Separator />
-        <CardTitle className='text-lg'>IPV4 SUBNETTING</CardTitle>
+        <CardTitle className='text-lg font-bold'>IPV4 SUBNETTING</CardTitle>
         <CardDescription>IPv4 subnetting card</CardDescription>
       </CardHeader>
       <CardContent>
-        <div>
-          <p>Web App</p>
+        <div className='flex justify-between'>
+          <p className='text-blue-500 font-semibold'>Web App</p>
           <Image 
            src='/icons/plus-circle.svg'
            alt='Plus-Circle icon'
            height={30}
            width={30}
+          //  className='stroke-blue-500'
           />
         </div>        
       </CardContent>      

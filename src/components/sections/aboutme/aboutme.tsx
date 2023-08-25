@@ -13,7 +13,7 @@ const AboutMeSection = () => {
 
       {/* What I'm Working On block */}
       <div id='wiwo-block' className='mb-8'>     
-        {/* Heading */}
+        {/* Sub Heading */}
         <h3 className="text-lg md:text-2xl text-blue-600 mb-8">
           WHAT I'M WORKING ON
         </h3>
@@ -30,8 +30,8 @@ const AboutMeSection = () => {
       </div>
 
       {/* Skills block */}
-      <div id='skills-block' className='mb-8'>
-        {/* Heading */}
+      <div id='skills-block' className='mb-32'>
+        {/* Sub Heading */}
         <h3 className="text-xl md:text-2xl text-blue-600 mb-8">
           SKILLS
         </h3>

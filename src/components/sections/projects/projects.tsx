@@ -5,7 +5,7 @@ import ThreadCard from "./thread-card"
 
 const ProjectSection = () => {
   return (
-    <div id="projects" className="min-h-screen border border-blue-500">
+    <div id="projects" className="min-h-screen">
       {/* Heading */}
       <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">
         PROJECTS

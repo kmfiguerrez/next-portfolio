@@ -1,4 +1,6 @@
 
+import Ipv4Card from "./ipv4-card"
+
 
 const ProjectSection = () => {
   return (
@@ -9,7 +11,9 @@ const ProjectSection = () => {
       </h2>
       {/* Project Cards */}
       <div className="grid grid-cols-3 gap-4 border ">
-        <div>project 1</div>
+        <div>
+          <Ipv4Card />
+        </div>
         <div>project 2</div>
         <div>project 3</div>
       </div>

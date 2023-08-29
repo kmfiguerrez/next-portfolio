@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import IPv6Dialog from './ipv6-dialog'
 
 const Ipv6Card = () => {
   return (
@@ -26,12 +27,7 @@ const Ipv6Card = () => {
       <CardContent>
         <div className='flex justify-between'>
           <p className='text-blue-500 font-semibold'>Web App</p>
-          <Image 
-           src='/icons/plus-circle.svg'
-           alt='Plus-Circle icon'
-           height={30}
-           width={30}          
-          />
+          <IPv6Dialog />
         </div>        
       </CardContent>      
     </Card>

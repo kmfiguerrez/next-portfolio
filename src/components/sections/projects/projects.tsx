@@ -1,3 +1,4 @@
+import IPv4Dialog from "./ipv4-dialog"
 import Ipv4Card from "./ipv4-card"
 import Ipv6Card from "./ipv6-card"
 import ThreadCard from "./thread-card"
@@ -10,8 +11,10 @@ const ProjectSection = () => {
       <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">
         PROJECTS
       </h2>
+
       {/* Project Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 border ">
+
         <div>
           <Ipv4Card />
         </div>
@@ -20,8 +23,9 @@ const ProjectSection = () => {
         </div>
         <div>
           <ThreadCard />
-        </div>
+        </div>        
       </div>
+
     </div>
   )
 }

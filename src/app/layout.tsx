@@ -1,3 +1,4 @@
+import Nav from '@/components/nav'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" className='scroll-smooth'>
       <body className={`${montserrat.className} bg-zinc-900 text-zinc-200`}>
-      <div className={`container px-1 ${borderColor}`}>
-        {children}
-      </div>
+        
+        <Nav />
+        <div className={`container px-1 ${borderColor}`}>
+          {children}
+        </div>
+        
       </body>
     </html>
   )

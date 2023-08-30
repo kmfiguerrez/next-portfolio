@@ -7,9 +7,10 @@ import Link from 'next/link'
 
 export default function Nav() {
   return (
-    <Disclosure as='nav' className='sm:py-2'>
+    <Disclosure as='nav' className='fixed z-40 w-full bg-zinc-900 bg-gradient-to-b from-zinc-400/30 sm:py-4'>
       {({ open }) => (
-        <>
+        <div className='container px-1'>
+
           <div className='flex items-center justify-between'>
             {/* flex item */}
             <div className='sm:hidden'>            
@@ -22,7 +23,7 @@ export default function Nav() {
               </Disclosure.Button>
             </div>
             {/* flex item */}
-            <div className='font-medium tracking-wide text-xl'>              
+            <div className='tracking-wide text-xl'>              
               KMF
             </div>
             {/* flex item */}
@@ -34,7 +35,9 @@ export default function Nav() {
                       key={link.href}
                       className='mx-2'
                     >
-                      <Link href={link.href}>{link.label}</Link>
+                      <Link href={link.href} className='transition-colors text-zinc-400 hover:text-zinc-200'>
+                        {link.label}
+                      </Link>
                     </li>
                   ))
                 }
@@ -44,27 +47,36 @@ export default function Nav() {
 
           {/*
             Use the `Transition` + `open` render prop argument to add transitions.
-          */}
-          <Transition
+          */}          
+          <Transition        
             show={open}
-            enter="transition duration-100 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0"
+            enter="transition-all duration-500"
+            enterFrom="h-0"
+            enterTo="h-[160px]"
+            leave="transition-all delay-[140ms] duration-500"
+            leaveFrom="h-[160px]"
+            leaveTo="h-0"
+            // className='bg-zinc-400'
           >
             {/*
               Don't forget to add `static` to your `Disclosure.Panel`!
             */}
+            <Transition.Child          
+              enter="transition-opacity delay-150 duration-500"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="transition-opacity duration-500"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
             <Disclosure.Panel className="sm:hidden" static>
-              <div className=''>
+              <div>
                 <ul className='flex flex-col'>
                   {
                     navigationLinks.map(link => (
                       <li
                         key={link.href}
-                        className='mx-2 my-1 hover:bg-zinc-700 rounded-md ps-2 py-2'
+                        className='transition-colors mx-1 my-1 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 rounded-md ps-1 py-1'
                       >
                         <Link href={link.href}>{link.label}</Link>                        
                       </li>
@@ -73,8 +85,10 @@ export default function Nav() {
                 </ul>
               </div>
             </Disclosure.Panel>
+            </Transition.Child>
           </Transition>
-        </>
+
+        </div>
       )}
     </Disclosure>
   )

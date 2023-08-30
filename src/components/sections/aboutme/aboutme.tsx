@@ -7,7 +7,7 @@ const AboutMeSection = () => {
   return (
     <div id='about-me' className="min-h-screen">
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">
+      <h2 className="text-center text-3xl font-bold mb-16 md:text-5xl">
         ABOUT ME
       </h2>
 

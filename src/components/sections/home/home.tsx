@@ -10,18 +10,18 @@ const HomeSection = () => {
           <Link
             href={'/#about-me'}
             className="
-                      transition-colors
-                      inline-block border 
-                      border-blue-600 
-                      rounded-md 
-                      py-2
-                      px-3
-                      text-blue-600
-                      hover:bg-blue-500
-                      hover:text-white
-                      hover:border-zinc-950
-                      my-3
-                    "
+              transition-colors
+              inline-block border 
+              border-blue-600 
+              rounded-md                
+              text-blue-600
+              py-2
+              px-3
+              hover:bg-blue-500
+              hover:text-white
+              hover:border-zinc-950
+              my-3
+            "
           >
             Hi, I'm
           </Link>
@@ -30,7 +30,7 @@ const HomeSection = () => {
         <p className="
               text-3xl
               sm:text-4xl
-              md:text-7xl
+              lg:text-7xl
               font-bold 
               tracking-wider 
               mb-4

@@ -7,7 +7,7 @@ const AboutMeSection = () => {
   return (
     <div id='about-me' className="min-h-screen">
       {/* Heading */}
-      <h2 className="text-center text-3xl font-bold mb-16 md:text-5xl">
+      <h2 className="text-center text-3xl font-bold mb-8 md:mb-16 md:text-5xl">
         ABOUT ME
       </h2>
 
@@ -32,7 +32,7 @@ const AboutMeSection = () => {
       {/* Skills block */}
       <div id='skills-block' className='mb-32'>
         {/* Sub Heading */}
-        <h3 className="text-xl md:text-2xl text-blue-600 mb-8">
+        <h3 className="text-xl text-blue-600 mb-6 md:text-2xl md:mb-8  ">
           SKILLS
         </h3>
 

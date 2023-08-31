@@ -18,7 +18,7 @@ const Ipv6Card = () => {
 
   return (
     <Card 
-      className='sm:w-[320px]' 
+      className='max-sm:mx-auto w-[320px]' 
       onMouseEnter={() => setIsHover(true)} 
       onMouseLeave={() => setIsHover(false)}      
       >

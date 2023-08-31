@@ -10,7 +10,7 @@ const HomeSection = () => {
           <Link
             href={'/#about-me'}
             className="
-                      transition 
+                      transition-colors
                       inline-block border 
                       border-blue-600 
                       rounded-md 
@@ -20,6 +20,7 @@ const HomeSection = () => {
                       hover:bg-blue-500
                       hover:text-white
                       hover:border-zinc-950
+                      my-3
                     "
           >
             Hi, I'm
@@ -32,7 +33,7 @@ const HomeSection = () => {
               md:text-7xl
               font-bold 
               tracking-wider 
-              my-2
+              mb-4
             ">
           KARL MICHAEL FIGUERREZ
         </p>

@@ -7,21 +7,26 @@ import {
   DialogTrigger,
   DialogFooter
 } from "@/components/ui/dialog"
+import { cn } from '@/lib/utils'
 
+// type imageProps = React.ImgHTMLAttributes<HTMLImageElement>
 
-const IPv4Dialog = () => {
+const IPv4Dialog = ({ className }: {className: string}) => {
   
 
   return (
     <Dialog>
+
       <DialogTrigger>
         <Image 
            src='/icons/plus-circle.svg'
            alt='Plus-Circle icon'
            height={30}
-           width={30}          
+           width={30}
+           className={className}     
         />
       </DialogTrigger>
+
       <DialogContent>
         <DialogHeader className="border-b pb-2">
           <DialogTitle className="text-black font-bold text-lg">IPV4 SUBNETTING</DialogTitle>          
@@ -70,7 +75,7 @@ const IPv4Dialog = () => {
               height={25}
               width={25}
             />
-            <a href="https://github.com/kmfiguerrez/IPv4-Subnetting" target="_blank">
+            <a href="https://github.com/kmfiguerrez/IPv4-Subnetting" target="_blank" className='hover:font-semibold'>
               Code
             </a>            
           </div>
@@ -81,13 +86,14 @@ const IPv4Dialog = () => {
               height={25}
               width={25}
             />
-            <a href="https://ipv4subnetting.netlify.app/" target="_blank">
+            <a href="https://ipv4subnetting.netlify.app/" target="_blank" className='hover:font-semibold'>
               Demo
             </a>
           </div>
         </DialogFooter>
         
       </DialogContent>
+
     </Dialog>
 
   )

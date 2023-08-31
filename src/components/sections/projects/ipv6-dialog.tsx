@@ -10,7 +10,7 @@ import {
 
 
 
-const IPv6Dialog = () => {
+const IPv6Dialog = ({ className }: {className: string}) => {
   
   return (
     <Dialog>
@@ -19,7 +19,8 @@ const IPv6Dialog = () => {
            src='/icons/plus-circle.svg'
            alt='Plus-Circle icon'
            height={30}
-           width={30}          
+           width={30}
+           className={className}    
         />
       </DialogTrigger>
       <DialogContent>
@@ -95,7 +96,7 @@ const IPv6Dialog = () => {
               height={25}
               width={25}
             />
-            <a href="https://github.com/kmfiguerrez/IPv6-Subnetting" target="_blank">
+            <a href="https://github.com/kmfiguerrez/IPv6-Subnetting" target="_blank" className='hover:font-semibold'>
               Code
             </a>            
           </div>
@@ -106,7 +107,7 @@ const IPv6Dialog = () => {
               height={25}
               width={25}
             />
-            <a href="https://ipv6subnetting.netlify.app/" target="_blank">
+            <a href="https://ipv6subnetting.netlify.app/" target="_blank" className='hover:font-semibold'>
               Demo
             </a>
           </div>

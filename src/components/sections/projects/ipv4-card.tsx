@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
 import IPv4Dialog from './ipv4-dialog'
@@ -11,8 +14,15 @@ import {
 
 
 const Ipv4Card = () => {
+  const [isHover, setIsHover] = useState(false)
+
   return (
-    <Card className='sm:w-[320px]'>
+    <Card 
+      className='sm:w-[320px]' 
+      onMouseEnter={() => setIsHover(true)} 
+      onMouseLeave={() => setIsHover(false)}      
+      >
+
       <CardHeader>
         <div className='relative h-[100px] mb-4'>
           <Image 
@@ -23,20 +33,22 @@ const Ipv4Card = () => {
         </div>
         <Separator />
         <CardTitle className='text-lg font-bold tracking-wide'>IPV4 SUBNETTING</CardTitle>
-        <CardDescription>IPv4 subnetting card</CardDescription>
+        <CardDescription>
+          {isHover ? '"Click the button for Info"' : 'IPv4 subnetting card'}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div className='flex justify-between'>
-          <p className='text-blue-500 font-semibold'>Web App</p>
-          {/* <Image 
-           src='/icons/plus-circle.svg'
-           alt='Plus-Circle icon'
-           height={30}
-           width={30}          
-          /> */}
-          <IPv4Dialog />
+          <p className=' text-blue-500 font-semibold'>                        
+            Web App
+          </p>          
+          <IPv4Dialog 
+            className={`
+              ${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}
+            `}
+          />
         </div>        
-      </CardContent>      
+      </CardContent>
     </Card>
   )
 }

@@ -11,9 +11,9 @@ const ContactSection = () => {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 gap-y-8 mb-8 sm:grid-cols-2 sm:gap-x-16">
-
-        <div className="">
+      <div className="grid grid-cols-1 gap-y-10 mb-8 sm:grid-cols-2 sm:gap-x-16">
+        {/* Grid Item */}
+        <div>
           {/* Sub Heading */}
           <h3 className="text-lg md:text-2xl text-blue-600 mb-8">
             SOCIALS
@@ -44,16 +44,14 @@ const ContactSection = () => {
               </svg>
             </a>
           </div>
-
         </div>
-
-        <div className="">
+        {/* Grid Item */}
+        <div>
           {/* Sub Heading */}
-          <h3 className="text-lg md:text-2xl text-blue-600 mb-8">
+          <h3 className="text-lg text-blue-600 mb-4 md:text-2xl md:mb-8">
             SEND ME A MESSAGE
           </h3>
-          <ContactForm />
-          
+          <ContactForm />          
         </div>
 
       </div>

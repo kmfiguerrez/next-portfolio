@@ -7,7 +7,8 @@ export const formSchema = z.object({
   email: z.string().email(),
   message: z
             .string()
-            .min(2)
+            .min(2, 'Message must be at least two characters')
+            
 })
 
 

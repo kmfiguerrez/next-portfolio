@@ -1,10 +1,11 @@
 'use client'
 
-import { type formData, formSchema } from "@/schema/form-schema" 
+import { type formDataType, formSchema } from "@/schema/form-schema" 
 import { useForm, SubmitHandler } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import {
   Form,
   FormControl,
@@ -14,21 +15,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { useRef } from "react"
-import { Textarea } from "@/components/ui/textarea"
+
 
 
 const ContactForm = () => {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors, isSubmitting },
-  //   reset,    
-  // } = useForm<formData>({
-  //   resolver: zodResolver(formSchema)
-  // })
-  const dataRef = useRef('')
-  const form = useForm<formData>({
+  
+  const form = useForm<formDataType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -37,10 +29,29 @@ const ContactForm = () => {
     }
   })
 
-  const onSubmit: SubmitHandler<formData>  = (data) => {
-    alert(data.name)
-    console.log(data.name)
-    dataRef.current = data.name
+  const onSubmit: SubmitHandler<formDataType>  = async (data) => {
+    
+    // Pass our data to getform.io
+    const formData = new FormData();
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, value)
+    })
+
+    const response = await fetch("https://getform.io/f/0de5399d-e61c-4f60-ab57-97c3c22109b5", {
+      method: "POST",
+      body: formData, 
+      headers: {
+        "Accept": "application/json",
+        // "content-type": "formdata"
+      }
+    })
+    console.log(formData)
+    const resData = await response.json()
+    if (!response.ok) {
+      alert('Submitting form failed!')
+    }
+    
+    console.log(resData)
   }
 
   return (
@@ -51,9 +62,13 @@ const ContactForm = () => {
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input 
+                  placeholder="Your name" 
+                  className="rounded-sm text-black focus-visible:ring-blue-500"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 This is your public display name.
@@ -63,6 +78,7 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
+
         <FormField
           control={form.control}
           name='email'
@@ -70,16 +86,17 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-                {form.formState.isSubmitSuccessful.toString()}
-              </FormDescription>
+                <Input 
+                  placeholder="Your email"
+                  className="rounded-sm text-black focus-visible:ring-blue-500"
+                  {...field} 
+                />
+              </FormControl>              
               <FormMessage />
             </FormItem>
           )}
         />
+
         <FormField
           control={form.control}
           name='message'
@@ -87,17 +104,22 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>                
-                <Textarea {...field}/>
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-                {form.formState.isSubmitSuccessful.toString()}
-              </FormDescription>
+                <Textarea 
+                  placeholder="Your message"
+                  className="rounded-sm text-black focus-visible:ring-blue-500"
+                  {...field}
+                />
+              </FormControl>              
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button 
+          type="submit"
+          className="bg-blue-600 hover:bg-blue-800"
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   )

@@ -13,7 +13,7 @@ export default function Nav() {
 
           <div className='flex items-center justify-between'>
             {/* flex item */}
-            <div className='sm:hidden'>            
+            <div className='sm:hidden order-last'>            
               <Disclosure.Button className="rounded-md p-2 text-zinc-400 hover:bg-zinc-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">                
                 {open ? (
                   <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
@@ -50,42 +50,35 @@ export default function Nav() {
           */}          
           <Transition        
             show={open}
-            enter="transition-all duration-500"
+            enter="transition-all duration-300"
             enterFrom="h-0"
             enterTo="h-[160px]"
-            leave="transition-all delay-[140ms] duration-500"
+            leave="transition-all duration-300"
             leaveFrom="h-[160px]"
             leaveTo="h-0"
-            // className='bg-zinc-400'
+            className='overflow-hidden'
           >
             {/*
               Don't forget to add `static` to your `Disclosure.Panel`!
             */}
-            <Transition.Child          
-              enter="transition-opacity delay-150 duration-500"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-500"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
             <Disclosure.Panel className="sm:hidden" static>
               <div>
                 <ul className='flex flex-col'>
                   {
                     navigationLinks.map(link => (
-                      <li
-                        key={link.href}
-                        className='transition-colors mx-1 my-1 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 rounded-md ps-1 py-1'
-                      >
-                        <Link href={link.href}>{link.label}</Link>                        
-                      </li>
+                      <Link href={link.href}>
+                        <li
+                          key={link.href}
+                          className='transition-colors mx-1 my-1 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 rounded-md ps-1 py-1'
+                        >
+                          {link.label}                      
+                        </li>
+                      </Link>
                     ))
                   }
                 </ul>
               </div>
             </Disclosure.Panel>
-            </Transition.Child>
           </Transition>
 
         </div>

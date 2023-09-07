@@ -11,7 +11,7 @@ import {
 
 const WebDevCard = () => {
   return (
-    <Card className="sm:w-[380px] bg-transparent border-zinc-500 text-zinc-100">
+    <Card className="bg-transparent border-zinc-500 text-zinc-100 sm:w-[380px]">
       <CardHeader>
         <div className='relative h-[220px] mb-1'>
           <Image 

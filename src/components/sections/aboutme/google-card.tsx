@@ -11,14 +11,15 @@ const GoogleCard = () => {
   return (
     <Card className="bg-transparent border-zinc-500 text-zinc-100 sm:w-[380px]">
       <CardHeader>
-        <div className='relative h-[220px] mb-1'>
+        {/* <div className='relative h-[220px] mb-1'>
           <Image 
             src='/images/google.png'
             alt='Google IT Support logo'
             fill
             sizes='100%'            
           />
-        </div>  
+        </div> */}
+        <img src="/images/google.png" alt="Google IT Support Logo" />
         <CardTitle className='tracking-wide'>Google IT Support</CardTitle>
         <CardDescription>Google certification card</CardDescription>
       </CardHeader>

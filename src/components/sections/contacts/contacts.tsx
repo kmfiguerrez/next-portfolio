@@ -1,6 +1,7 @@
 import Image from "next/image"
 import ContactForm from "./form"
-
+import { ArrowUpCircle } from "lucide-react"
+import Link from "next/link"
 
 const ContactSection = () => {
   return (
@@ -11,7 +12,7 @@ const ContactSection = () => {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 gap-y-10 mb-8 sm:grid-cols-2 sm:gap-x-16">
+      <div className="grid grid-cols-1 gap-y-10 mb-10 sm:grid-cols-2 sm:gap-x-16">
         {/* Grid Item */}
         <div>
           {/* Sub Heading */}
@@ -55,6 +56,13 @@ const ContactSection = () => {
         </div>
 
       </div>
+      
+      <div className="sm:hidden text-white/70 hover:text-white text-center">
+        <Link href='/#home' className="inline-block">
+          <ArrowUpCircle strokeWidth={1} size={40} className="animate-bounce"/>
+        </Link>
+      </div>
+      
 
     </section>
   )

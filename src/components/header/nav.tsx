@@ -66,9 +66,8 @@ export default function Nav() {
                 <ul className='flex flex-col'>
                   {
                     navigationLinks.map(link => (
-                      <Link href={link.href}>
-                        <li
-                          key={link.href}
+                      <Link href={link.href} key={link.href}>
+                        <li                          
                           className='transition-colors mx-1 my-1 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 rounded-md ps-1 py-1'
                         >
                           {link.label}                      

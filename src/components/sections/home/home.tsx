@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const HomeSection = () => {
   return (
-    <div id="home" className="flex items-center min-h-screen">      
+    <section id="home" className="flex items-center min-h-screen">      
       {/* This outer div is a flex item. */}
       <div>
         <div>
@@ -40,7 +40,7 @@ const HomeSection = () => {
         {/* Disappearing text. */}
         <DisappearingText />
       </div>
-    </div>    
+    </section>    
   )
 }
 

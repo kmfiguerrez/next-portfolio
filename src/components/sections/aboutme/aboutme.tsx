@@ -5,7 +5,7 @@ import GoogleCard from './google-card'
 
 const AboutMeSection = () => {
   return (
-    <div id='about-me' className="min-h-screen">
+    <section id='about-me' className="min-h-screen">
       {/* Heading */}
       <h2 className="text-center text-3xl font-bold mb-8 md:mb-16 md:text-5xl">
         ABOUT ME
@@ -187,7 +187,7 @@ const AboutMeSection = () => {
         </div>
 
       </div>
-    </div>
+    </section>
   )
 }
 

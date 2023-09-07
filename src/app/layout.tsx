@@ -1,4 +1,4 @@
-import Nav from '@/components/nav'
+import Nav from '@/components/header/nav'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'

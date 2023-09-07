@@ -6,9 +6,9 @@ import ThreadCard from "./thread-card"
 
 const ProjectSection = () => {
   return (
-    <div id="projects" className="min-h-screen">
+    <section id="projects" className="min-h-screen">
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">
+      <h2 className="text-center text-3xl font-bold mb-8 md:text-5xl md:mb-16">
         PROJECTS
       </h2>
 
@@ -26,7 +26,7 @@ const ProjectSection = () => {
         </div>        
       </div>
 
-    </div>
+    </section>
   )
 }
 

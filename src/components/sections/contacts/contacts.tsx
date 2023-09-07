@@ -4,7 +4,7 @@ import ContactForm from "./form"
 
 const ContactSection = () => {
   return (
-    <div id="contacts" className="min-h-screen border border-blue-500">
+    <section id="contacts" className="min-h-screen">
       {/* Section Title*/}
       <h2 className="text-center text-3xl font-bold mb-8 md:mb-16 md:text-5xl">
         CONTACTS
@@ -56,7 +56,7 @@ const ContactSection = () => {
 
       </div>
 
-    </div>
+    </section>
   )
 }
 

@@ -19,7 +19,7 @@ const GoogleCard = () => {
             sizes='100%'            
           />
         </div> */}
-        <img src="/images/google.png" alt="Google IT Support Logo" />
+        <img src="/next-portfolio/images/google.png" alt="Google IT Support Logo" width='auto' />
         <CardTitle className='tracking-wide'>Google IT Support</CardTitle>
         <CardDescription>Google certification card</CardDescription>
       </CardHeader>

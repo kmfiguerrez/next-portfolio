@@ -16,7 +16,7 @@ const IPv6Dialog = ({ className }: {className: string}) => {
     <Dialog>
       <DialogTrigger>
         <Image 
-           src='/icons/plus-circle.svg'
+           src='/next-portfolio/icons/plus-circle.svg'
            alt='Plus-Circle icon'
            height={30}
            width={30}
@@ -91,7 +91,7 @@ const IPv6Dialog = ({ className }: {className: string}) => {
         <DialogFooter className="flex-row justify-center text-black border-t pt-4 space-x-8">
           <div className='flex space-x-2'>
             <Image 
-              src='/icons/code.svg'
+              src='/next-portfolio/icons/code.svg'
               alt='A code icon'
               height={25}
               width={25}
@@ -102,7 +102,7 @@ const IPv6Dialog = ({ className }: {className: string}) => {
           </div>
           <div className='flex space-x-2'>
             <Image 
-              src='/icons/demo.svg'
+              src='/next-portfolio/icons/demo.svg'
               alt='A code icon'
               height={25}
               width={25}

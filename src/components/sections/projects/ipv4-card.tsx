@@ -26,7 +26,7 @@ const Ipv4Card = () => {
       <CardHeader>
         <div className='relative h-[100px] mb-4'>
           <Image 
-            src='/logos/ipv4.svg'
+            src='/next-portfolio/logos/ipv4.svg'
             alt='Ipv4 logo'
             fill
           />

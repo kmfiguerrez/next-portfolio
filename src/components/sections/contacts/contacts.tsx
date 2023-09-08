@@ -22,12 +22,12 @@ const ContactSection = () => {
 
           <div className="relative h-[300px]  sm:w-[380px] sm:mx-auto mb-4">
             <Image 
-              src='/images/socials.svg'
+              src='/next-portfolio/images/socials.svg'
               alt="Socials Image"
               fill              
             />
           </div>
-
+          {/* Social icons */}
           <div className="flex justify-between sm:w-[380px] mx-auto px-2">
             <a href="https://www.linkedin.com/in/kmfiguerrez/" target="_blank">            
             <svg xmlns="http://www.w3.org/2000/svg" height={45} width={45} viewBox="0 0 448 512" className="transition-colors fill-white hover:fill-blue-600">

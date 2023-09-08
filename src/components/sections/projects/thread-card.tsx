@@ -13,7 +13,7 @@ const ThreadCard = () => {
     <Card className='max-sm:mx-auto w-[320px]'>
       <CardHeader>        
         <Image 
-          src='/icons/gear.svg'
+          src='/next-portfolio/icons/gear.svg'
           alt='Ipv4 logo'
           height={70}
           width={70}
@@ -29,7 +29,7 @@ const ThreadCard = () => {
             Both UI and logic are not yet finished
           </p>
           <Image 
-           src='/icons/warning.svg'
+           src='/next-portfolio/icons/warning.svg'
            alt='Plus-Circle icon'
            height={30}
            width={30}          

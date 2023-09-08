@@ -41,7 +41,7 @@ const AboutMeSection = () => {
 
           <div className='flex items-center'>
             <Image 
-              src='/logos/html5.svg'
+              src='/next-portfolio/logos/html5.svg'
               alt='HTML 5 Logo'
               height={23}
               width={23}
@@ -50,7 +50,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/css.svg'
+              src='/next-portfolio/logos/css.svg'
               alt='CSS 3 Logo'
               height={23}
               width={23}
@@ -59,7 +59,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/sass.svg'
+              src='/next-portfolio/logos/sass.svg'
               alt='SASS Logo'
               height={28}
               width={28}            
@@ -68,7 +68,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/tailwind.svg'
+              src='/next-portfolio/logos/tailwind.svg'
               alt='Tailwind Logo'
               height={28}
               width={28}            
@@ -77,7 +77,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/bootstrap.svg'
+              src='/next-portfolio/logos/bootstrap.svg'
               alt='Bootstrap Logo'
               height={30}
               width={30}
@@ -86,7 +86,7 @@ const AboutMeSection = () => {
           </div>          
           <div className='flex items-center'>
             <Image 
-              src='/logos/javascript.svg'
+              src='/next-portfolio/logos/javascript.svg'
               alt='Javascript Logo'
               height={25}
               width={25}
@@ -95,7 +95,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/typescript.svg'
+              src='/next-portfolio/logos/typescript.svg'
               alt='Typescript Logo'
               height={25}
               width={25}
@@ -104,7 +104,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/zod.svg'
+              src='/next-portfolio/logos/zod.svg'
               alt='Zod Logo'
               height={25}
               width={25}
@@ -113,7 +113,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/react.svg'
+              src='/next-portfolio/logos/react.svg'
               alt='React Logo'
               height={25}
               width={25}
@@ -122,7 +122,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/next.svg'
+              src='/next-portfolio/logos/next.svg'
               alt='Next.js Logo'
               height={25}
               width={25}
@@ -131,7 +131,7 @@ const AboutMeSection = () => {
           </div>                  
           <div className='flex items-center'>
             <Image 
-              src='/logos/express.svg'
+              src='/next-portfolio/logos/express.svg'
               alt='Express.js Logo'
               height={25}
               width={25}
@@ -140,7 +140,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/mongodb.svg'
+              src='/next-portfolio/logos/mongodb.svg'
               alt='MongoDB Logo'
               height={28}
               width={28}
@@ -149,7 +149,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/node.svg'
+              src='/next-portfolio/logos/node.svg'
               alt='Node.js Logo'
               height={28}
               width={28}
@@ -158,7 +158,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/vite.svg'
+              src='/next-portfolio/logos/vite.svg'
               alt='Vite Logo'
               height={28}
               width={28}
@@ -167,7 +167,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/git.svg'
+              src='/next-portfolio/logos/git.svg'
               alt='Git Logo'
               height={28}
               width={28}
@@ -176,7 +176,7 @@ const AboutMeSection = () => {
           </div>
           <div className='flex items-center'>
             <Image 
-              src='/logos/github.svg'
+              src='/next-portfolio/logos/github.svg'
               alt='Git Logo'
               height={28}
               width={28}

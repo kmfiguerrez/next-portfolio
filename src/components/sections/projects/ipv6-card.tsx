@@ -26,7 +26,7 @@ const Ipv6Card = () => {
       <CardHeader>
         <div className='relative h-[100px] mb-4'>
           <Image 
-            src='/logos/ipv6.svg'
+            src='/next-portfolio/logos/ipv6.svg'
             alt='Ipv4 logo'
             fill
           />

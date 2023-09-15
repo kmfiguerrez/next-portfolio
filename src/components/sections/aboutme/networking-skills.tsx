@@ -3,7 +3,7 @@ import Image from "next/image"
 const NetworkingSkills = () => {
   return (
     // GRID
-    <div className="grid grid-cols-2 gap-x-4 gap-y-8">
+    <div className="grid grid-cols-2 gap-x-4 min-h-[445.78px]">
       
       <div className='flex items-center'>
         <Image 

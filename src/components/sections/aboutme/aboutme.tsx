@@ -3,6 +3,7 @@ import GoogleCard from './google-card'
 import SkillsTabs from './skills-tabs'
 import ITFundCard from './itsupport-card'
 import ITNetworkCard from './itnetwork-card'
+import CertAlertDialog from './cert-alert-dialog'
 
 
 const AboutMeSection = () => {
@@ -37,15 +38,15 @@ const AboutMeSection = () => {
         <h3 className="text-lg md:text-2xl text-blue-600 mb-8">CERTIFICATIONS</h3>
         
         <div className="flex flex-col md:flex-row md:justify-between">
-          <div className='mb-8'>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/ZY64XF5TJLAK" target='_blank'>
+          <div className='mb-8'>            
+            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/ZY64XF5TJLAK'>
               <ITFundCard />
-            </a>            
+            </CertAlertDialog>
           </div>
-          <div className='md:basis-1/2'>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/TRF9KUAM8W48" target='_blank'>
+          <div className='md:basis-1/2'>            
+            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/TRF9KUAM8W48'>
               <ITNetworkCard />
-            </a>            
+            </CertAlertDialog>
           </div>          
         </div>
       </div>

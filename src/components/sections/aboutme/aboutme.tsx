@@ -1,9 +1,7 @@
-import WebDevCard from './webdev-card'
-import GoogleCard from './google-card'
 import SkillsTabs from './skills-tabs'
-import ITFundCard from './itsupport-card'
-import ITNetworkCard from './itnetwork-card'
 import CertAlertDialog from './cert-alert-dialog'
+import CertCard from './cert-card'
+import WiwoCard from './wiwo-card'
 
 
 const AboutMeSection = () => {
@@ -23,10 +21,22 @@ const AboutMeSection = () => {
 
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className='mb-8'>
-            <WebDevCard />
+            <WiwoCard 
+              imgSrc='/next-portfolio/images/web-dev.jpg'
+              imgAlt='Web Development Logo'
+              title='Web Development'
+              description='Web Development card'
+              content="I'm doing Web Development projects."
+            />
           </div>
           <div className='md:basis-1/2'>
-            <GoogleCard />
+            <WiwoCard 
+              imgSrc='/next-portfolio/images/google.png'
+              imgAlt='Google IT Support Logo'
+              title='Google IT Support'
+              description='Google certification card'
+              content="I'm taking Google IT Support certification as one of chosen scholars."
+            />
           </div>
         </div>
 
@@ -40,12 +50,23 @@ const AboutMeSection = () => {
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className='mb-8'>            
             <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/ZY64XF5TJLAK'>
-              <ITFundCard />
+              <CertCard 
+                title='IT Support Fundamentals'
+                imgSrc='/next-portfolio/logos/google.svg'
+                h={50}
+                w={50}
+              />
             </CertAlertDialog>
           </div>
           <div className='md:basis-1/2'>            
             <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/TRF9KUAM8W48'>
-              <ITNetworkCard />
+              <CertCard
+                title='The Bits and Bytes of Computer Networking'
+                imgSrc='/next-portfolio/logos/google.svg'
+                h={50}
+                w={50}
+                titleSize='text-xl'
+              />
             </CertAlertDialog>
           </div>          
         </div>

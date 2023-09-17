@@ -1,7 +1,6 @@
-import IPv4Dialog from "./ipv4-dialog"
-import Ipv4Card from "./ipv4-card"
-import Ipv6Card from "./ipv6-card"
 import ThreadCard from "./thread-card"
+import ProjectCard from "./project-card"
+
 
 
 const ProjectSection = () => {
@@ -16,10 +15,20 @@ const ProjectSection = () => {
       <div className="grid grid-cols-1 gap-y-8 mb-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
 
         <div>
-          <Ipv4Card />
+          <ProjectCard
+            imgSrc="/next-portfolio/logos/ipv4.svg"
+            imgAlt="Ipv4 logo"
+            title="IPV4 SUBNETTING"
+            dialog='ipv4'
+          />
         </div>
         <div>
-          <Ipv6Card />
+          <ProjectCard
+            imgSrc="/next-portfolio/logos/ipv6.svg"
+            imgAlt="Ipv6 logo"
+            title="IPV6 SUBNETTING"
+            dialog="ipv6"
+          />
         </div>
         <div>
           <ThreadCard />

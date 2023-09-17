@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 import {
   Dialog,
   DialogContent,
@@ -7,9 +9,16 @@ import {
   DialogTrigger,
   DialogFooter
 } from "@/components/ui/dialog"
-import { cn } from '@/lib/utils'
+
+
 
 // type imageProps = React.ImgHTMLAttributes<HTMLImageElement>
+interface ProjDialogProps {
+  title: string,
+  codeLink: string,
+  demoLink: string,
+  children: ReactNode,
+}
 
 const IPv4Dialog = ({ className }: {className: string}) => {
   
@@ -82,7 +91,7 @@ const IPv4Dialog = ({ className }: {className: string}) => {
           <div className='flex space-x-2'>
             <Image 
               src='/next-portfolio/icons/demo.svg'
-              alt='A code icon'
+              alt='A demo icon'
               height={25}
               width={25}
             />

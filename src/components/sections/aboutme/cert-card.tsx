@@ -6,14 +6,21 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+interface CertCardProps {
+  title: string,
+  imgSrc: string,  
+  h: number,
+  w: number
+  titleSize?: string,
+}
 
-const ITNetworkCard = () => {
+const CertCard = ( {title, imgSrc, h, w, titleSize=''}: CertCardProps ) => {
   return (
     <Card className="bg-transparent border-zinc-500 text-zinc-100 max-w-fit">
       <CardHeader className="flex-row space-x-1">
-        <Image src='/next-portfolio/logos/google.svg' alt="Google logo" height={50} width={50}/>
+        <Image src={imgSrc} alt='Google logo' height={h} width={w}/>
         <div>
-          <CardTitle className="text-xl">The Bits and Bytes of Computer Networking</CardTitle>
+          <CardTitle className={titleSize}>{title}</CardTitle>
           <CardDescription>Google</CardDescription>
         </div>        
       </CardHeader>
@@ -21,4 +28,4 @@ const ITNetworkCard = () => {
   )
 }
 
-export default ITNetworkCard
+export default CertCard

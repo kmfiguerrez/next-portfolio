@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
-import IPv4Dialog from './ipv4-dialog'
-import IPv6Dialog from './ipv6-dialog'
+import Ipv4DialogContent from './ipv4-dialog-content'
+import ProjectDialog from './project-dialog'
 import {
   Card,
   CardContent,
@@ -12,6 +12,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import IPv6DialogContent from './ipv6-dialog-content'
+
 
 interface ProjCardProps {
   imgSrc: string,
@@ -19,7 +21,6 @@ interface ProjCardProps {
   title: string,  
   dialog: string,
 }
-
 
 const ProjectCard = ({imgSrc, imgAlt, title, dialog}: ProjCardProps) => {
   const [isHover, setIsHover] = useState(false)
@@ -30,14 +31,9 @@ const ProjectCard = ({imgSrc, imgAlt, title, dialog}: ProjCardProps) => {
       onMouseEnter={() => setIsHover(true)} 
       onMouseLeave={() => setIsHover(false)}      
       >
-
       <CardHeader>
         <div className='relative h-[100px] mb-4'>
-          <Image 
-            src={imgSrc}
-            alt={imgAlt}
-            fill
-          />
+          <Image src={imgSrc} alt={imgAlt} fill />
         </div>
         <Separator />
         <CardTitle className='text-lg font-bold tracking-wide'>{title}</CardTitle>
@@ -45,17 +41,31 @@ const ProjectCard = ({imgSrc, imgAlt, title, dialog}: ProjCardProps) => {
           {isHover ? '"Click the button for Info"' : 'IPv4 subnetting card'}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+
+      <CardContent>        
         <div className='flex justify-between'>
           <p className=' text-blue-500 font-semibold'>                        
             Web App
           </p>
           {/* Will render ipv4 or ipv6 dialog */}
           {dialog === 'ipv4' ? 
-            <IPv4Dialog 
-              className={`${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}`} /> 
+            <ProjectDialog 
+              className={`${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}`}
+              title='IPV4 SUBNETTING'
+              codeLink='https://github.com/kmfiguerrez/IPv4-Subnetting'
+              demoLink='https://ipv4subnetting.netlify.app/'
+            >
+              <Ipv4DialogContent />
+            </ProjectDialog>
             : 
-            <IPv6Dialog className={`${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}`} />
+            <ProjectDialog 
+              className={`${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}`}
+              title='IPV6 SUBNETTING'
+              codeLink='https://github.com/kmfiguerrez/IPv6-Subnetting'
+              demoLink='https://ipv6subnetting.netlify.app/'              
+            >
+              <IPv6DialogContent />
+            </ProjectDialog>
           }          
         </div>        
       </CardContent>

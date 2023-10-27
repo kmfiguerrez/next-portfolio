@@ -3,11 +3,11 @@ import { z } from "zod";
 export const formSchema = z.object({
   name: z
         .string()
-        .min(2, 'Name must be at least 2 characters'),
-  email: z.string().email(),
+        .refine(data => data.length > 0, {message: 'Name is required.'}),
+  email: z.string().email({message: 'Provide a valid email.'}),
   message: z
             .string()
-            .min(2, 'Message must be at least two characters')
+            .refine(data => data.length > 0, {message: 'Message is required.'})
             
 })
 

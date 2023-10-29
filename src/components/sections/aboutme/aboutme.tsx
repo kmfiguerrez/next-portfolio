@@ -47,8 +47,10 @@ const AboutMeSection = () => {
         {/* Sub Heading */}
         <h3 className="text-lg md:text-2xl text-blue-600 mb-8">CERTIFICATIONS</h3>
         
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <div className='mb-8'>            
+        {/* Cards */}
+        {/* <div className="flex flex-col md:flex-row md:justify-between"> */}
+        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 ">          
+          <div>            
             <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/ZY64XF5TJLAK'>
               <CertCard 
                 title='IT Support Fundamentals'
@@ -58,7 +60,8 @@ const AboutMeSection = () => {
               />
             </CertAlertDialog>
           </div>
-          <div className='md:basis-1/2'>            
+
+          <div>            
             <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/TRF9KUAM8W48'>
               <CertCard
                 title='The Bits and Bytes of Computer Networking'
@@ -68,7 +71,31 @@ const AboutMeSection = () => {
                 titleSize='text-xl'
               />
             </CertAlertDialog>
-          </div>          
+          </div>
+
+          <div>            
+            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/L822U8LZEYGK'>
+              <CertCard
+                title='Operating System & You: Become a Power User'
+                imgSrc='/next-portfolio/logos/google.svg'
+                h={50}
+                w={50}
+                titleSize='text-xl'
+              />
+            </CertAlertDialog>
+          </div>
+
+          <div>            
+            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/4CVHBLP7CL6S'>
+              <CertCard
+                title='System Administration and IT Infrastructure Services'
+                imgSrc='/next-portfolio/logos/google.svg'
+                h={50}
+                w={50}
+                titleSize='text-xl'
+              />
+            </CertAlertDialog>
+          </div>
         </div>
       </div>
 

@@ -1,7 +1,10 @@
 import SkillsTabs from './skills-tabs'
-import CertAlertDialog from './cert-alert-dialog'
+import CustomAlertDialog from './custom-alert-dialog'
 import CertCard from './cert-card'
 import WiwoCard from './wiwo-card'
+import Image from 'next/image'
+import googleCert from '../../../../public/images/google-cert.png'
+
 
 
 const AboutMeSection = () => {
@@ -29,7 +32,7 @@ const AboutMeSection = () => {
               content="I'm doing Web Development projects."
             />
           </div>
-          <div className='md:basis-1/2'>
+          {/* <div className='md:basis-1/2'>
             <WiwoCard 
               imgSrc='/next-portfolio/images/google.png'
               imgAlt='Google IT Support Logo'
@@ -37,7 +40,7 @@ const AboutMeSection = () => {
               description='Google certification card'
               content="I'm taking Google IT Support certification as one of chosen scholars."
             />
-          </div>
+          </div> */}
         </div>
 
       </div>
@@ -51,52 +54,45 @@ const AboutMeSection = () => {
         {/* <div className="flex flex-col md:flex-row md:justify-between"> */}
         <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 ">          
           <div>            
-            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/ZY64XF5TJLAK'>
+            <CustomAlertDialog 
+              webLink='https://www.coursera.org/account/accomplishments/specialization/certificate/9UQS5TTQDK9X'
+              title='View the cert?'
+              text='This link will lead you to Coursera site.'
+            >
               <CertCard 
-                title='IT Support Fundamentals'
+                title='Google IT Support'
                 imgSrc='/next-portfolio/logos/google.svg'
                 h={50}
                 w={50}
               />
-            </CertAlertDialog>
-          </div>
-
-          <div>            
-            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/TRF9KUAM8W48'>
-              <CertCard
-                title='The Bits and Bytes of Computer Networking'
-                imgSrc='/next-portfolio/logos/google.svg'
-                h={50}
-                w={50}
-                titleSize='text-xl'
-              />
-            </CertAlertDialog>
-          </div>
-
-          <div>            
-            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/L822U8LZEYGK'>
-              <CertCard
-                title='Operating System & You: Become a Power User'
-                imgSrc='/next-portfolio/logos/google.svg'
-                h={50}
-                w={50}
-                titleSize='text-xl'
-              />
-            </CertAlertDialog>
-          </div>
-
-          <div>            
-            <CertAlertDialog webLink='https://www.coursera.org/account/accomplishments/certificate/4CVHBLP7CL6S'>
-              <CertCard
-                title='System Administration and IT Infrastructure Services'
-                imgSrc='/next-portfolio/logos/google.svg'
-                h={50}
-                w={50}
-                titleSize='text-xl'
-              />
-            </CertAlertDialog>
+            </CustomAlertDialog>
           </div>
         </div>
+
+      </div>
+
+      {/* Badges block */}
+      <div id='badge-block' className='mb-10'>
+        {/* Sub Heading */}
+        <h3 className="text-lg md:text-2xl text-blue-600 mb-8">BADGES</h3>
+        
+        {/* Image */}
+        {/* <div className="flex flex-col md:flex-row md:justify-between"> */}
+        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 ">          
+          <CustomAlertDialog
+            webLink='https://www.credly.com/badges/b166c276-cf7f-45d6-a0b2-6f59584dcf48/public_url'
+            title='View the badge?'
+            text='This link will lead you to Credly.'
+          >
+            <Image
+              src={googleCert}
+              alt='Google IT Support badge'
+              height={210}
+              width={210}              
+            />
+          </CustomAlertDialog>
+        </div>
+
       </div>
 
       {/* Skills block */}

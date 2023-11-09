@@ -16,20 +16,22 @@ import {
 interface CertProps {
   children: ReactNode,
   webLink: string,
+  title: string
+  text: string
   
 }
 
-const CertAlertDialog = ({children, webLink}: CertProps) => {
+const CustomAlertDialog = ({children, webLink, title, text}: CertProps) => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="text-left">
+      <AlertDialogTrigger className="text-left w-max">
         {children}
       </AlertDialogTrigger>
       <AlertDialogContent className="bg-zinc-900 text-white border-white/20">
         <AlertDialogHeader>
-          <AlertDialogTitle>View the Cert?</AlertDialogTitle>
+          <AlertDialogTitle>{ title }</AlertDialogTitle>
           <AlertDialogDescription className="text-white/80">
-            This link will lead you to Coursera site.
+            { text }
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -44,4 +46,4 @@ const CertAlertDialog = ({children, webLink}: CertProps) => {
   )
 }
 
-export default CertAlertDialog
+export default CustomAlertDialog

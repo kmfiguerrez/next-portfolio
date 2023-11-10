@@ -19,6 +19,7 @@ const ProjectSection = () => {
             imgSrc="/next-portfolio/logos/ipv4.svg"
             imgAlt="Ipv4 logo"
             title="IPV4 SUBNETTING"
+            description="#coding"
             dialog='ipv4'
           />
         </div>
@@ -27,6 +28,7 @@ const ProjectSection = () => {
             imgSrc="/next-portfolio/logos/ipv6.svg"
             imgAlt="Ipv6 logo"
             title="IPV6 SUBNETTING"
+            description="#coding"
             dialog="ipv6"
           />
         </div>

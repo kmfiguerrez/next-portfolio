@@ -18,11 +18,12 @@ import IPv6DialogContent from './ipv6-dialog-content'
 interface ProjCardProps {
   imgSrc: string,
   imgAlt: string,
-  title: string,  
+  title: string,
+  description: string,
   dialog: string,
 }
 
-const ProjectCard = ({imgSrc, imgAlt, title, dialog}: ProjCardProps) => {
+const ProjectCard = ({imgSrc, imgAlt, title, description, dialog}: ProjCardProps) => {
   const [isHover, setIsHover] = useState(false)
 
   return (
@@ -38,7 +39,7 @@ const ProjectCard = ({imgSrc, imgAlt, title, dialog}: ProjCardProps) => {
         <Separator />
         <CardTitle className='text-lg font-bold tracking-wide'>{title}</CardTitle>
         <CardDescription>
-          {isHover ? '"Click the button for Info"' : 'IPv4 subnetting card'}
+          {isHover ? '"Click the button for Info"' : description}
         </CardDescription>
       </CardHeader>
 

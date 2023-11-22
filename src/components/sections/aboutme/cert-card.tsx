@@ -8,20 +8,21 @@ import {
 
 interface CertCardProps {
   title: string,
+  description: string,
   imgSrc: string,  
   h: number,
   w: number
   titleSize?: string,
 }
 
-const CertCard = ( {title, imgSrc, h, w, titleSize=''}: CertCardProps ) => {
+const CertCard = ( {title, imgSrc, h, w, description, titleSize=''}: CertCardProps ) => {
   return (
     <Card className="bg-transparent border-zinc-500 text-zinc-100 max-w-fit">
       <CardHeader className="flex-row space-x-1">
         <Image src={imgSrc} alt='Google logo' height={h} width={w}/>
         <div>
           <CardTitle className={titleSize}>{title}</CardTitle>
-          <CardDescription>Google</CardDescription>
+          <CardDescription>{description}</CardDescription>
         </div>        
       </CardHeader>
     </Card>

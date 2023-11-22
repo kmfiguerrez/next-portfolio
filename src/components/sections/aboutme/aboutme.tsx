@@ -3,7 +3,10 @@ import CustomAlertDialog from './custom-alert-dialog'
 import CertCard from './cert-card'
 import WiwoCard from './wiwo-card'
 import Image from 'next/image'
+
+// Static assets paths
 import googleCert from '../../../../public/images/google-cert.png'
+import fccLogo from '../../../../public/logos/fcc-logo.svg.svg'
 
 
 
@@ -61,12 +64,30 @@ const AboutMeSection = () => {
             >
               <CertCard 
                 title='Google IT Support'
+                description='Google'
                 imgSrc='/next-portfolio/logos/google.svg'
                 h={50}
                 w={50}
               />
             </CustomAlertDialog>
           </div>
+
+          <div>            
+            <CustomAlertDialog 
+              webLink='https://www.freecodecamp.org/certification/kmfiguerrez/back-end-development-and-apis'
+              title='View the cert?'
+              text='This link will lead you to Freecodecamp site.'
+            >
+              <CertCard 
+                title='Back End Development and APIs'
+                description='Freecodecamp'
+                imgSrc={fccLogo}
+                h={50}
+                w={50}
+              />
+            </CustomAlertDialog>
+          </div>
+
         </div>
 
       </div>

@@ -4,7 +4,7 @@ const IPv6DialogContent = () => {
   return (
     <div className="py-4 px-1 text-black h-[350px] max-h-[400px] overflow-y-scroll">
 
-      <h5 className="font-semibold mb-2">DESCRIPTION</h5>
+      <h5 className="font-semibold mb-2">ABOUT</h5>
       <p>
         IPv6 Address subnetting is the process of splitting a network into smaller networks known as Subnets.
         This project is a web app and can be used by anyone whether they're learning or practicing subnetting

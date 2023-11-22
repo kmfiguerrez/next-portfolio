@@ -55,7 +55,8 @@ const AboutMeSection = () => {
         
         {/* Cards */}
         {/* <div className="flex flex-col md:flex-row md:justify-between"> */}
-        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 ">          
+        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 ">
+          {/* Google card*/}
           <div>            
             <CustomAlertDialog 
               webLink='https://www.coursera.org/account/accomplishments/specialization/certificate/9UQS5TTQDK9X'
@@ -71,7 +72,7 @@ const AboutMeSection = () => {
               />
             </CustomAlertDialog>
           </div>
-
+          
           <div>            
             <CustomAlertDialog 
               webLink='https://www.freecodecamp.org/certification/kmfiguerrez/back-end-development-and-apis'

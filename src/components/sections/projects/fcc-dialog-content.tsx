@@ -1,13 +1,12 @@
 
 
-const Ipv4DialogContent = () => {
+const FCCDialogContent = () => {
   return (
     <div className="py-4 px-1 text-black h-[350px] max-h-[400px] overflow-y-scroll">
       <h5 className="font-semibold mb-2">ABOUT</h5>
       <p>
-        IPv4 Address subnetting is the process of splitting a network into smaller networks known as Subnets.
-        This project is a web app and can be used by anyone whether they're learning or practicing subnetting
-        for free.
+        A <span className="font-semibold">microservice</span> is a small, independent, and modular component within a software architecture 
+        that is designed to perform a specific function.
         <br />
         <br />
         I developed this project as one of my personal project to help me check my work or whenever I'm
@@ -37,4 +36,4 @@ const Ipv4DialogContent = () => {
   )
 }
 
-export default Ipv4DialogContent
+export default FCCDialogContent

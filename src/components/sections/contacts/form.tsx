@@ -19,6 +19,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { useEffect } from "react"
+import MessageIcon from "@/components/svg/airplane-icon"
 
 
 
@@ -166,11 +167,25 @@ const ContactForm = () => {
 
           <Button 
             type="submit"
-            className="bg-blue-600 hover:bg-blue-800"
+            className="max-sm:w-full bg-blue-600 hover:bg-blue-800"
             disabled={form.formState.isSubmitting}
           >
-            <Loader2 className={`mr-2 h-4 w-4 animate-spin ${!form.formState.isSubmitting ? 'hidden' : ''}`} />
-            {form.formState.isSubmitting ? 'Loading' : 'Submit'}
+            {/* <Loader2 className={`mr-2 h-4 w-4 animate-spin ${!form.formState.isSubmitting ? 'hidden' : ''}`} />
+            {form.formState.isSubmitting ? 'Loading' : 'Send'} */}
+
+            
+            {form.formState.isSubmitting ? (
+              <div className="flex">
+                <Loader2 className={`mr-2 h-4 w-4 animate-spin ${!form.formState.isSubmitting ? 'hidden' : ''}`} />
+                <p>Loading</p>
+              </div>
+              
+              ) : (
+              <div className="flex space-x-1">
+                <p>Send Message</p>
+                <MessageIcon />
+              </div>
+            )}
           </Button>
 
         </form>

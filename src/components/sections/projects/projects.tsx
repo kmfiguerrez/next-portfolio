@@ -20,7 +20,7 @@ const ProjectSection = () => {
       <div className="grid grid-cols-1 gap-y-8 mb-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
         
         {/* Not yet finished */}
-        {/* <div>
+        <div>
           <ProjectCard
             imgSrc={apiPic}
             imgAlt="A microservice picture."
@@ -31,20 +31,7 @@ const ProjectSection = () => {
             appType="backend"
             dialog='microservices'
           />
-        </div> */}
-
-        <div>
-          <ProjectCard            
-            imgSrc={ipv4Logo}
-            imgWidth={130}
-            imgHeight={130}
-            imgAlt="Ipv4 logo"
-            title="IPV4 SUBNETTING"
-            description="#coding"
-            appType="frontend"
-            dialog='ipv4'
-          />
-        </div>
+        </div>        
 
         <div>
           <ProjectCard
@@ -56,6 +43,19 @@ const ProjectSection = () => {
             description="#coding"
             appType="frontend"
             dialog="ipv6"
+          />
+        </div>
+
+        <div>
+          <ProjectCard            
+            imgSrc={ipv4Logo}
+            imgWidth={130}
+            imgHeight={130}
+            imgAlt="Ipv4 logo"
+            title="IPV4 SUBNETTING"
+            description="#coding"
+            appType="frontend"
+            dialog='ipv4'
           />
         </div>
         <div>

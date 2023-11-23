@@ -20,14 +20,37 @@ const FCCDialogContent = () => {
           <li className="font-semibold">Timestamp Microservice</li>
           <li className="font-semibold">Request Header Parser Microservice</li>
           <li className="font-semibold">URL Shortener Microservice</li>
-          <li className="font-semibold">Exercise Tracker</li>
+          <li className="font-semibold">Exercise Tracker Microservice</li>
           <li className="font-semibold">File Metadata Microservice</li>
         </ul>
         <br />
-        <p>Each of the services returns data in a JSON format.</p>
-          
+        <p>Each of the services returns data in a JSON format.</p>          
         <br />
-        <strong>Note:</strong> This app is on a free hosting plan so access to this app is limited.
+        <p>
+          <strong>Note:</strong> The codes are hosted on Replit and I am using the free tier.
+          Each microservice is hosted on its own repl virtual machines.          
+          <strong>Replit might stop each virtual machines if requests to each APIs exceeded
+          the data limit. </strong>
+        </p>
+        <br />
+        <p>
+          Right now I'm using the default UIs provided by Freecodecamp while
+          I'm modifying them.
+          But you can already send an HTTP request to each API endpoints.
+        </p>
+      </section>
+
+      <br />
+      <section>
+        <h5 className="font-semibold mb-2">USAGE</h5>
+        <ul className="list-inside list-disc ps-4">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Node.js</li>
+          <li>REST API</li>
+          <li>Mongoose.js</li>
+          <li>MongoDB Atlas</li>
+        </ul>
       </section>
 
       <br />
@@ -44,13 +67,6 @@ const FCCDialogContent = () => {
         </ul>
       </section>
 
-      <br />
-
-      <h5 className="font-semibold mb-2">FEATURES</h5>
-      <ul className="list-inside list-disc ps-4">
-        <li>Conversions</li>
-        <li>Validations</li>
-      </ul>
     </div>
   )
 }

@@ -21,7 +21,7 @@ const CertCard = ( {title, imgSrc, h, w, description, titleSize=''}: CertCardPro
       <CardHeader className="flex-row space-x-1">
         <Image src={imgSrc} alt='Google logo' height={h} width={w}/>
         <div>
-          <CardTitle className={titleSize}>{title}</CardTitle>
+          <CardTitle className={`${titleSize} wr`}>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </div>        
       </CardHeader>

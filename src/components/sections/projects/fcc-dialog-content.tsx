@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 
 const FCCDialogContent = () => {
@@ -40,18 +46,11 @@ const FCCDialogContent = () => {
         </p>
       </section>
 
-      <br />
+      {/* <br />
       <section>
-        <h5 className="font-semibold mb-2">USAGE</h5>
-        <ul className="list-inside list-disc ps-4">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Node.js</li>
-          <li>REST API</li>
-          <li>Mongoose.js</li>
-          <li>MongoDB Atlas</li>
-        </ul>
-      </section>
+        <h5 className="font-semibold mb-2">USAGE:</h5>
+        <UsageAccordion />
+      </section> */}
 
       <br />
 
@@ -68,6 +67,48 @@ const FCCDialogContent = () => {
       </section>
 
     </div>
+  )
+}
+
+function UsageAccordion() {
+  return (
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Timestamp Microservice</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Request Header Parser Microservice</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem value="item-3">
+        <AccordionTrigger>URL Shortener Microservice</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem value="item-4">
+        <AccordionTrigger>Exercise Tracker Microservice</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem value="item-5">
+        <AccordionTrigger>File Metadata Microservice</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+
   )
 }
 

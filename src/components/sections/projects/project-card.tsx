@@ -77,12 +77,13 @@ const ProjectCard = ({imgSrc, imgAlt, imgWidth, imgHeight, title, description, a
             </ProjectDialog>
           }
 
+          {/* Change the code link */}
           {dialog === 'microservices' &&
             <ProjectDialog 
               className={`${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}`}
               title='MICROSERVICES'
-              codeLink='https://github.com/kmfiguerrez/IPv6-Subnetting'
-              demoLink='https://ipv6subnetting.netlify.app/'              
+              codeLink='https://www.freecodecamp.org/certification/kmfiguerrez/back-end-development-and-apis'
+              demoLink='https://www.freecodecamp.org/certification/kmfiguerrez/back-end-development-and-apis'              
             >
               <FCCDialogContent />
             </ProjectDialog>

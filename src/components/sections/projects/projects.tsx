@@ -19,7 +19,7 @@ const ProjectSection = () => {
       {/* Project Cards */}
       <div className="grid grid-cols-1 gap-y-8 mb-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
         
-        {/* Not yet finished */}
+        
         <div>
           <ProjectCard
             imgSrc={apiPic}

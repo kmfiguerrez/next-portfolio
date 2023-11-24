@@ -24,7 +24,7 @@ interface CertProps {
 const CustomAlertDialog = ({children, webLink, title, text}: CertProps) => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="text-left">
+      <AlertDialogTrigger className="text-left max-w-max">
         {children}
       </AlertDialogTrigger>
       <AlertDialogContent className="bg-zinc-900 text-white border-white/20">

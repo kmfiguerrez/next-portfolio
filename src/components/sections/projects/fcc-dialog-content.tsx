@@ -64,8 +64,7 @@ const FCCDialogContent = () => {
           <li>Mongoose.js</li>
           <li>MongoDB Atlas</li>
         </ul>
-      </section>
-
+      </section>            
     </div>
   )
 }

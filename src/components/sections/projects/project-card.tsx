@@ -82,7 +82,7 @@ const ProjectCard = ({imgSrc, imgAlt, imgWidth, imgHeight, title, description, a
             <ProjectDialog 
               className={`${isHover ? 'transition delay-75 scale-150 animate-pulse' : ''}`}
               title='MICROSERVICES'
-              codeLink='https://www.freecodecamp.org/certification/kmfiguerrez/back-end-development-and-apis'
+              codeLink=''
               demoLink='https://www.freecodecamp.org/certification/kmfiguerrez/back-end-development-and-apis'              
             >
               <FCCDialogContent />

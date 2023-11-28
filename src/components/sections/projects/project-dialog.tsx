@@ -8,11 +8,8 @@ import {
   DialogTrigger,
   DialogFooter
 } from "@/components/ui/dialog"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
+import { MicroservicesPopover } from './fcc-dialog-content'
+
 
 
 
@@ -43,7 +40,7 @@ const ProjectDialog = ({ className, title, codeLink, demoLink, children }: ProjD
         />
       </DialogTrigger>
 
-      <DialogContent>
+      <DialogContent onInteractOutside={e => e.preventDefault()}>
         <DialogHeader className="border-b pb-2">
           <DialogTitle className="text-black font-bold text-lg">{title}</DialogTitle>          
         </DialogHeader>
@@ -100,44 +97,3 @@ const ProjectDialog = ({ className, title, codeLink, demoLink, children }: ProjD
 export default ProjectDialog
 
 
-function MicroservicesPopover() {
-  return (
-    <Popover modal={true}>
-      <PopoverTrigger className='hover:font-semibold'>
-        Code
-      </PopoverTrigger>
-      <PopoverContent side='top' className='min-w-max'>
-        <h5 className='font-semibold mb-4 underline underline-offset-4 decoration-sky-500 decoration-2'>Code for?</h5>
-        <ul className='list-inside list-image-[url("/next-portfolio/icons/code.svg")]'>
-
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
-            <a href="https://replit.com/@kmfiguerrez1/fcc-project-timestamp" target='_blank'>
-              Timestamp Microservice
-            </a>
-          </li>
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
-            <a href="https://replit.com/@kmfiguerrez1/fcc-project-headerparser" target='_blank'>
-              Headparser Microservice
-            </a>
-          </li>
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
-            <a href="https://replit.com/@kmfiguerrez1/fcc-project-urlshortener" target='_blank'>
-              URL Shortener Microservice
-            </a>
-          </li>
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
-            <a href="https://replit.com/@kmfiguerrez1/fcc-project-exercisetracker" target='_blank'>
-              Exercise Tracker Microservice
-            </a>
-          </li>
-          <li className='text-black/80 hover:text-black'>
-            <a href="https://replit.com/@kmfiguerrez1/fcc-project-filemetadata" target='_blank'>
-              File Metadata Microservice
-            </a>
-          </li>
-
-        </ul>
-      </PopoverContent>
-    </Popover>
-  )
-}

@@ -1,9 +1,11 @@
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  PopoverClose,
+  PopoverArrow,
+} from "@/components/ui/popover"
+import { X } from "lucide-react"
 
 
 const FCCDialogContent = () => {
@@ -69,46 +71,54 @@ const FCCDialogContent = () => {
   )
 }
 
-function UsageAccordion() {
+export function MicroservicesPopover() {
   return (
-    <Accordion type="single" collapsible>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Timestamp Microservice</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
+    <Popover modal={true}>
+      <PopoverTrigger className='hover:font-semibold'>
+        Code
+      </PopoverTrigger>
+      <PopoverContent side='top' className='min-w-max'>
+        <h5 className='font-semibold mb-4 underline underline-offset-4 decoration-sky-500 decoration-2'>Code for?</h5>
+        <ul className='list-inside list-image-[url("/next-portfolio/icons/code.svg")]'>
 
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Request Header Parser Microservice</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+            <a href="https://replit.com/@kmfiguerrez1/fcc-project-timestamp" target='_blank'>
+              Timestamp Microservice
+            </a>
+          </li>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+            <a href="https://replit.com/@kmfiguerrez1/fcc-project-headerparser" target='_blank'>
+              Headparser Microservice
+            </a>
+          </li>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+            <a href="https://replit.com/@kmfiguerrez1/fcc-project-urlshortener" target='_blank'>
+              URL Shortener Microservice
+            </a>
+          </li>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+            <a href="https://replit.com/@kmfiguerrez1/fcc-project-exercisetracker" target='_blank'>
+              Exercise Tracker Microservice
+            </a>
+          </li>
+          <li className='text-black/80 hover:text-black'>
+            <a href="https://replit.com/@kmfiguerrez1/fcc-project-filemetadata" target='_blank'>
+              File Metadata Microservice
+            </a>
+          </li>
 
-      <AccordionItem value="item-3">
-        <AccordionTrigger>URL Shortener Microservice</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-
-      <AccordionItem value="item-4">
-        <AccordionTrigger>Exercise Tracker Microservice</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-
-      <AccordionItem value="item-5">
-        <AccordionTrigger>File Metadata Microservice</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-
+        </ul>
+        <PopoverClose
+         className="rounded-full h-[25px] w-[25px] inline-flex items-center justify-center  absolute top-[5px] right-[5px] hover:bg-violet-400 focus:shadow-[0_0_0_2px] focus:shadow-violet-700 outline-none"
+        >
+          <X className="h-4 w-4" />
+        </PopoverClose>
+        {/* <PopoverArrow className="" width={15} height={10} /> */}
+      </PopoverContent>
+    </Popover>
   )
 }
+
+
 
 export default FCCDialogContent

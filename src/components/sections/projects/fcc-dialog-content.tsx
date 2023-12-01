@@ -12,7 +12,9 @@ const FCCDialogContent = () => {
   return (
     <div className="py-4 px-1 text-black h-[350px] max-h-[400px] overflow-y-scroll">
       <section>
-        <h5 className="font-semibold mb-2">ABOUT</h5>
+        <h5 className="font-semibold mb-2 underline underline-offset-4 decoration-sky-500 decoration-2">
+          ABOUT
+        </h5>
         <p>
           A <span className="font-semibold">microservice</span> is a small, independent, and modular component within a software architecture 
           that is designed to perform a specific function.
@@ -32,10 +34,12 @@ const FCCDialogContent = () => {
           <li className="font-semibold">File Metadata Microservice</li>
         </ul>
         <br />
-        <p>Each of the services returns data in a JSON format.</p>          
+        <p>Each of the services returns data in JSON format.</p>          
         <br />
         <p>
-          <strong>Note:</strong> The codes are hosted on Replit and I am using the free tier.
+          <strong>Note:</strong>
+          <br />
+          The codes are hosted on Replit and I am using the free tier.
           Each microservice is hosted on its own repl virtual machines.          
           <strong>Replit might stop each virtual machines if requests to each APIs exceeded
           the data limit. </strong>
@@ -48,19 +52,50 @@ const FCCDialogContent = () => {
         </p>
       </section>
 
-      {/* <br />
+      <br />
+
       <section>
-        <h5 className="font-semibold mb-2">USAGE:</h5>
-        <UsageAccordion />
-      </section> */}
+        <h5 className="font-semibold mb-2 underline underline-offset-4 decoration-sky-500 decoration-2">
+          STUFF I ADDED IN
+        </h5>
+        <ul className="list-outside list-disc ps-4">
+          <li className="mb-3">
+            I used <span className="font-semibold">Next.js</span> because it allows devs to create static websites
+            using <span className="font-semibold">React.js</span>. It also optimizes your build, so it provides a
+            lot of heavy lifting for you.
+          </li>
+          <li className="mb-3">
+            I used <span className="font-semibold">Typescript</span> to have type system checking at compile time.
+            It also helps avoiding bugs during development.
+          </li>
+          <li className="mb-3">
+            I used <span className="font-semibold">Tailwind</span> for easy styling and makes websites responsive
+            across screen sizes way easier.
+          </li>
+          <li className="mb-3">
+            I used <span className="font-semibold">Zod</span> for data validation for both compile time and runtime.
+          </li>
+          <li className="mb-3">
+            I used the <span className="font-semibold">React Hook Form and Zod combo</span>  for sanitizing user data
+            on forms easier.
+          </li>          
+        </ul>
+      </section>
 
       <br />
 
       <section>
-        <h5 className="font-semibold mb-2">TECH USED</h5>
+        <h5 className="font-semibold mb-2 underline underline-offset-4 decoration-sky-500 decoration-2">
+          TECH USED
+        </h5>
         <ul className="list-inside list-disc ps-4">
           <li>HTML</li>
-          <li>CSS</li>
+          <li>Tailwind</li>
+          <li>React.js</li>
+          <li>Next.js</li>
+          <li>Typescript</li>
+          <li>Zod</li>
+          <li>React Hook Form</li>
           <li>Node.js</li>
           <li>REST API</li>
           <li>Mongoose.js</li>
@@ -78,7 +113,9 @@ export function MicroservicesPopover() {
         Code
       </PopoverTrigger>
       <PopoverContent side='top' className='min-w-max'>
-        <h5 className='font-semibold mb-4 underline underline-offset-4 decoration-sky-500 decoration-2'>Code for?</h5>
+        <h5 className='font-semibold mb-4 underline underline-offset-4 decoration-sky-500 decoration-2'>
+          Code for?
+        </h5>
         <ul className='list-inside list-image-[url("/next-portfolio/icons/code.svg")]'>
 
           <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>

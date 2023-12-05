@@ -44,12 +44,7 @@ const FCCDialogContent = () => {
           <strong>Replit might stop each virtual machines if requests to each APIs exceeded
           the data limit. </strong>
         </p>
-        <br />
-        <p>
-          Right now I'm using the default UIs provided by Freecodecamp while
-          I'm modifying them.
-          But you can already send an HTTP request to each API endpoints.
-        </p>
+
       </section>
 
       <br />
@@ -118,27 +113,27 @@ export function MicroservicesPopover() {
         </h5>
         <ul className='list-inside list-image-[url("/next-portfolio/icons/code.svg")]'>
 
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-amber-400'>
             <a href="https://replit.com/@kmfiguerrez1/fcc-project-timestamp" target='_blank'>
               Timestamp Microservice
             </a>
           </li>
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-sky-500'>
             <a href="https://replit.com/@kmfiguerrez1/fcc-project-headerparser" target='_blank'>
               Headparser Microservice
             </a>
           </li>
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-pink-500'>
             <a href="https://replit.com/@kmfiguerrez1/fcc-project-urlshortener" target='_blank'>
               URL Shortener Microservice
             </a>
           </li>
-          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-black'>
+          <li className='max-sm:mb-2 mb-1 border-b text-black/80 hover:text-violet-500'>
             <a href="https://replit.com/@kmfiguerrez1/fcc-project-exercisetracker" target='_blank'>
               Exercise Tracker Microservice
             </a>
           </li>
-          <li className='text-black/80 hover:text-black'>
+          <li className='text-black/80 hover:text-green-500'>
             <a href="https://replit.com/@kmfiguerrez1/fcc-project-filemetadata" target='_blank'>
               File Metadata Microservice
             </a>

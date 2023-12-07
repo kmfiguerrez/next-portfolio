@@ -1,4 +1,7 @@
 import Image from "next/image"
+// Images route.
+import framerMotion from '../../../../public/logos/framer-motion.png'
+
 
 const CodingSKills = () => {
   return (
@@ -34,22 +37,31 @@ const CodingSKills = () => {
       </div>
       <div className='flex items-center'>
         <Image 
-          src='/next-portfolio/logos/tailwind.svg'
-          alt='Tailwind Logo'
-          height={28}
-          width={28}            
-        />
-        <p className='ms-2'>Tailwind</p>
-      </div>
-      <div className='flex items-center'>
-        <Image 
           src='/next-portfolio/logos/bootstrap.svg'
           alt='Bootstrap Logo'
           height={30}
           width={30}
         />
         <p className='ms-2'>Bootstrap</p>
-      </div>          
+      </div>        
+      <div className='flex items-center'>
+        <Image 
+          src='/next-portfolio/logos/tailwind.svg'
+          alt='Tailwind Logo'
+          height={28}
+          width={28}            
+        />
+        <p className='ms-2'>Tailwind</p>
+      </div> 
+      <div className='flex items-center'>
+        <Image 
+          src={framerMotion}
+          alt='Framer Motion Logo'
+          height={27}
+          width={27}            
+        />
+        <p className='ms-2'>Framer Motion</p>
+      </div> 
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/javascript.svg'
@@ -70,15 +82,6 @@ const CodingSKills = () => {
       </div>
       <div className='flex items-center'>
         <Image 
-          src='/next-portfolio/logos/zod.svg'
-          alt='Zod Logo'
-          height={25}
-          width={25}
-        />
-        <p className='ms-2'>Zod</p>
-      </div>
-      <div className='flex items-center'>
-        <Image 
           src='/next-portfolio/logos/react.svg'
           alt='React Logo'
           height={25}
@@ -94,7 +97,16 @@ const CodingSKills = () => {
           width={25}
         />
         <p className='ms-2'>NEXT</p>
-      </div>                  
+      </div>  
+      <div className='flex items-center'>
+        <Image 
+          src='/next-portfolio/logos/zod.svg'
+          alt='Zod Logo'
+          height={25}
+          width={25}
+        />
+        <p className='ms-2'>Zod</p>
+      </div>                
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/express.svg'
@@ -103,15 +115,6 @@ const CodingSKills = () => {
           width={25}
         />
         <p className='ms-2'>Express</p>
-      </div>
-      <div className='flex items-center'>
-        <Image 
-          src='/next-portfolio/logos/mongodb.svg'
-          alt='MongoDB Logo'
-          height={28}
-          width={28}
-        />
-        <p className='ms-1'>MongoDB</p>
       </div>
       <div className='flex items-center'>
         <Image 
@@ -124,13 +127,22 @@ const CodingSKills = () => {
       </div>
       <div className='flex items-center'>
         <Image 
+          src='/next-portfolio/logos/mongodb.svg'
+          alt='MongoDB Logo'
+          height={28}
+          width={28}
+        />
+        <p className='ms-1'>MongoDB</p>
+      </div>
+      {/* <div className='flex items-center'>
+        <Image 
           src='/next-portfolio/logos/vite.svg'
           alt='Vite Logo'
           height={28}
           width={28}
         />
         <p className='ms-2'>Vite</p>
-      </div>
+      </div> */}
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/git.svg'

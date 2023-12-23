@@ -31,7 +31,7 @@ const AboutMeSection = () => {
               imgSrc='/next-portfolio/images/web-dev.jpg'
               imgAlt='Web Development Logo'
               title='Web Development'
-              description='Web Development card'
+              description='#coding'
               content="I'm doing Web Development projects."
             />
           </div>

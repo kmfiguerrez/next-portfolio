@@ -1,4 +1,8 @@
 import Image from "next/image"
+import vm from '../../../../public/logos/vm.svg'
+import docker from '../../../../public/logos/docker.svg'
+
+
 
 const InfrastructureSkills = () => {
   return (
@@ -41,7 +45,7 @@ const InfrastructureSkills = () => {
           />
           <p className='ms-2'>APs</p>
       </div>
-      <div className='flex items-center'>
+      {/* <div className='flex items-center'>
         <Image 
           src='/next-portfolio/icons/cisco-fileserver.svg'
           alt='Cisco fileserver logo'
@@ -58,7 +62,7 @@ const InfrastructureSkills = () => {
           width={23}
           />
           <p className='ms-2'>DHCP</p>
-      </div>
+      </div> */}
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/icons/windows-os.svg'
@@ -94,6 +98,24 @@ const InfrastructureSkills = () => {
           width={23}
           />
           <p className='ms-2'>BASH</p>
+      </div>
+      <div className='flex items-center'>
+        <Image 
+          src={vm}
+          alt='BASH logo'
+          height={23}
+          width={23}
+          />
+          <p className='ms-2'>Virtual Machine</p>
+      </div>
+      <div className='flex items-center'>
+        <Image 
+          src={docker}
+          alt='BASH logo'
+          height={23}
+          width={23}
+          />
+          <p className='ms-2'>Docker</p>
       </div>
       <div className='flex items-center'>
         <Image 

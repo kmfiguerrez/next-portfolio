@@ -196,10 +196,10 @@ export default function DisappearingText() {
     return (                            
       <p className={`
         before:content-[open-quote] 
-        after:content-[close-quote]
-        text-xl
-        sm:text-2xl
-        md:text-3xl 
+        after:content-[close-quote]        
+        sm:text-lg        
+        md:text-xl
+        lg:text-3xl
         tracking-wider
       `}>
         {firstWord} <span className="text-blue-600">{secondWord}</span>

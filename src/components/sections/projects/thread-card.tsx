@@ -10,7 +10,7 @@ import {
 
 const ThreadCard = () => {
   return (
-    <Card className='max-sm:mx-auto w-[320px]'>
+    <Card className='max-sm:mx-auto w-[320px] max-md:mx-auto'>
       <CardHeader>        
         <Image 
           src='/next-portfolio/icons/gear.svg'

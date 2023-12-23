@@ -19,7 +19,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { useEffect } from "react"
-import MessageIcon from "@/components/svg/airplane-icon"
+import MessageIcon from "@/components/svg/message-icon"
 
 
 

@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-const NetworkingSkills = () => {
+const InfrastructureSkills = () => {
   return (
     // GRID
     <div className="grid grid-cols-2 gap-x-4 min-h-[445.78px]">
@@ -118,4 +118,4 @@ const NetworkingSkills = () => {
   )
 }
 
-export default NetworkingSkills
+export default InfrastructureSkills

@@ -197,7 +197,7 @@ export default function DisappearingText() {
       <p className={`
         before:content-[open-quote] 
         after:content-[close-quote]        
-        sm:text-lg        
+        sm:text-lg
         md:text-xl
         lg:text-3xl
         tracking-wider

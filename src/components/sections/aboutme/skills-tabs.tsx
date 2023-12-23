@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import CodingSKills from "./coding-skills"
-import NetworkingSkills from "./networking-skills"
+import NetworkingSkills from "./infrastructure-skills"
 
 const SkillsTabs = () => {
   return (

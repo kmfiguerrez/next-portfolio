@@ -167,7 +167,7 @@ const ContactForm = () => {
 
           <Button 
             type="submit"
-            className="max-sm:w-full bg-blue-600 hover:bg-blue-800"
+            className="max-md:w-full bg-blue-600 hover:bg-blue-800"
             disabled={form.formState.isSubmitting}
           >
             {/* <Loader2 className={`mr-2 h-4 w-4 animate-spin ${!form.formState.isSubmitting ? 'hidden' : ''}`} />

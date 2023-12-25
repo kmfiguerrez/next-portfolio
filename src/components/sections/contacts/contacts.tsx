@@ -12,7 +12,7 @@ const ContactSection = () => {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 gap-y-10 mb-10 sm:grid-cols-2 sm:gap-x-16">
+      <div className="grid grid-cols-1 gap-y-10 mb-10 md:grid-cols-2 md:gap-x-16">
         {/* Grid Item */}
         <div>
           {/* Sub Heading */}

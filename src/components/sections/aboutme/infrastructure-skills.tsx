@@ -112,10 +112,10 @@ const InfrastructureSkills = () => {
         <Image 
           src={docker}
           alt='BASH logo'
-          height={23}
-          width={23}
+          height={25}
+          width={25}
           />
-          <p className='ms-2'>Docker</p>
+          <p className='ms-1'>Docker</p>
       </div>
       <div className='flex items-center'>
         <Image 

@@ -7,6 +7,7 @@ import Image from 'next/image'
 // Static assets paths
 import googleCert from '../../../../public/images/google-cert.png'
 import fccLogo from '../../../../public/logos/fcc-logo.svg.svg'
+// import itCert from '../../../../public/images/it-cert.jpg'
 
 
 
@@ -35,15 +36,15 @@ const AboutMeSection = () => {
               content="I'm doing Web Development projects."
             />
           </div>
-          {/* <div className='md:basis-1/2'>
+          <div className='md:basis-1/2'>
             <WiwoCard 
-              imgSrc='/next-portfolio/images/google.png'
-              imgAlt='Google IT Support Logo'
-              title='Google IT Support'
-              description='Google certification card'
-              content="I'm taking Google IT Support certification as one of chosen scholars."
+              imgSrc={'/next-portfolio/images/it-cert.jpg'}
+              imgAlt='IT cert logo'
+              title='IT Certifications'
+              description='#infrastructure #coding'
+              content="I'm taking IT certifications."
             />
-          </div> */}
+          </div>
         </div>
 
       </div>

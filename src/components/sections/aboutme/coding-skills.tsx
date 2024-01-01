@@ -1,6 +1,8 @@
 import Image from "next/image"
 // Images route.
 import framerMotion from '../../../../public/logos/framer-motion.png'
+import nest from '../../../../public/logos/nest.svg'
+import shadcn from '../../../../public/logos/shadcn-ui.png'
 
 
 const CodingSKills = () => {
@@ -79,7 +81,7 @@ const CodingSKills = () => {
           width={25}
         />
         <p className='ms-2'>Typescript</p>
-      </div>
+      </div>        
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/react.svg'
@@ -97,7 +99,7 @@ const CodingSKills = () => {
           width={25}
         />
         <p className='ms-2'>NEXT</p>
-      </div>  
+      </div>
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/zod.svg'
@@ -106,7 +108,17 @@ const CodingSKills = () => {
           width={25}
         />
         <p className='ms-2'>Zod</p>
-      </div>                
+      </div>
+      <div className='flex items-center'>
+        <Image 
+          src={shadcn}
+          alt='Shadcn UI Logo'
+          height={25}
+          width={25}
+          className="rounded-sm"
+        />
+        <p className='ms-2'>Shadcn UI</p>
+      </div>                           
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/express.svg'
@@ -116,6 +128,15 @@ const CodingSKills = () => {
         />
         <p className='ms-2'>Express</p>
       </div>
+      <div className='flex items-center'>
+        <Image 
+          src={nest}
+          alt='Nest.js Logo'
+          height={25}
+          width={25}
+        />
+        <p className='ms-2'>NEST</p>
+      </div>         
       <div className='flex items-center'>
         <Image 
           src='/next-portfolio/logos/node.svg'
